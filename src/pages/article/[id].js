@@ -7,14 +7,22 @@ import Typography from '@mui/material/Typography';
 import PrimarySearchAppBar from '../../app/Components/HomeMenuBar'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { Container } from '@mui/system';
-
+import {getUsers} from '../api/axios'
+import { useGetArticles } from '../../hooks/useGetArticles'; 
 
 const theme = createTheme();
 
 
 export default function Article() {
+
+const articles = useGetArticles();     
+const tab = articles.articles ; 
+
+const handleClick = ()=> {
+    console.log(tab); 
+};
 
 
     return (
@@ -37,6 +45,7 @@ export default function Article() {
                     </Grid>
                 </Grid>
             </Container>
+            <Button onClick={()=>handleClick()}>Click Me</Button>
 
 
           

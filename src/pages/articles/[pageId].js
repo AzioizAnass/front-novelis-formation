@@ -15,11 +15,9 @@ import { CardActionArea } from '@mui/material';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { useRouter } from 'next/router'
-import Button from '@mui/material';
 
-import {  MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+import {  MemoryRouter, Route, Routes} from 'react-router-dom';
 import {Link} from "next/router"
-import usePagination from '@mui/material/usePagination';
 import PaginationItem from '@mui/material/PaginationItem';
 
 
@@ -33,7 +31,6 @@ const theme = createTheme();
 const customisedButton = ()=>{
 
 }
-
 
 const Content = () => {
   const router = useRouter()
